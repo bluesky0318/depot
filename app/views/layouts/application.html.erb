@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Depot</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body class="<%= controller.controller_name %>">
+  <div id="banner">
+    <%= @page_title || "Pragmatic Bookshelf" %>
+  </div>
+  <div id="columns">
+    <div id="side">
+      <ul>
+        <li><a href="http://127.0.0.1:3000/">Home</a></li>
+        <li><a href="http://127.0.0.1:3000/">Questions</a></li>
+        <li><a href="http://127.0.0.1:3000/">News</a></li>
+        <li><a href="http://127.0.0.1:3000/">Contact</a></li>
+      </ul>
+      <div id="cart">
+        <%= render(@cart) %>
+      </div>
+  </div>
+  <div id="main">
+      <%= yield %>
+  </div>
+  </div>
+</body>
+</html>
