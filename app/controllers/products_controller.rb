@@ -24,7 +24,6 @@ class ProductsController < ApplicationController
    # POST /line_items
   # POST /line_items.xml
   def create
-    binding.pry
     @product = Product.new(product_params)
 
     respond_to do |format|
